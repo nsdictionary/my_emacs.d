@@ -11,6 +11,4 @@
  deft-use-filename-as-title t
  deft-recursive t)
 
-(global-set-key (kbd "<f3>") 'deft)
-
 (provide 'init-deft)

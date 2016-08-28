@@ -80,6 +80,22 @@
 (require-package 'fill-column-indicator)
 (require-package 'smex)
 (require-package 'redo+)
+(require-package 'fold-this)
+(require-package 'php-mode)
+(require-package 'ace-jump-mode)
+(require-package 'multiple-cursors)
+(require-package 'smooth-scrolling)
+(require-package 'guide-key)
+(require-package 'paredit)
+(require-package 'move-text)
+(require-package 'magit)
+
+;; guide-key
+(require 'guide-key)
+(setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8" "C-x +"))
+(guide-key-mode 1)
+(setq guide-key/recursive-key-sequence-flag t)
+(setq guide-key/popup-window-position 'bottom)
 
 ;; Fill column indicator
 (require 'fill-column-indicator)
@@ -96,3 +112,7 @@
 (eval-after-load 'ido '(require 'init-ido))
 (require 'init-org)
 (require 'init-deft)
+
+;; Enable smooth scrolling
+(require 'smooth-scrolling)
+(smooth-scrolling-mode 1)
