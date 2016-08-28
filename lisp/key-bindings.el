@@ -22,10 +22,10 @@
 (global-set-key (kbd "C-c <") (kbd (format "C-u - %d C-x TAB" tab-width)))
 
 ;; Help teach to unlearn the arrow keys
-(global-unset-key (kbd "<left>"))
-(global-unset-key (kbd "<right>"))
-(global-unset-key (kbd "<up>"))
-(global-unset-key (kbd "<down>"))
+;; (global-unset-key (kbd "<left>"))
+;; (global-unset-key (kbd "<right>"))
+;; (global-unset-key (kbd "<up>"))
+;; (global-unset-key (kbd "<down>"))
 
 
 ;; I don't need to kill emacs that easily
