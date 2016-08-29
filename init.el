@@ -6,9 +6,6 @@
 ;; remove tutorial message
 (setq inhibit-startup-message t)
 
-;; set cursor type
-(setq-default cursor-type 'bar) ; box | bar | nbar
-
 ;; is MacOS ?
 (setq is-mac (equal system-type 'darwin))
 
@@ -18,12 +15,6 @@
   (setq mac-command-modifier 'meta)
   (setq ns-function-modifier 'hyper)
   (global-set-key (kbd "M-a") 'mark-whole-buffer))
-
-;; set line number
-(global-linum-mode 1)
-
-;; highlight cursor line
-(global-hl-line-mode 1)
 
 ;; disable save mode
 (desktop-save-mode 0)
@@ -58,6 +49,11 @@
 ;; ignore ring-bell sound
 (setq ring-bell-function 'ignore)
 
+;; Scroll only half-pages.
+(require 'view)
+(global-set-key "\C-v"   'View-scroll-half-page-forward)
+(global-set-key "\M-v"   'View-scroll-half-page-backward)
+
 ;; Set path to dependencies
 (setq settings-dir
       (expand-file-name "lisp" user-emacs-directory))
@@ -89,6 +85,18 @@
 (require-package 'paredit)
 (require-package 'move-text)
 (require-package 'magit)
+(require-package 'disable-mouse)
+(require-package 'jump-char)
+(require-package 'change-inner)
+(require-package 'origami)
+(require-package 'leuven-theme)
+
+;; Setting appearance
+(require 'appearance)
+
+;; disable mouse
+(require 'disable-mouse)
+(global-disable-mouse-mode)
 
 ;; guide-key
 (require 'guide-key)
@@ -99,7 +107,7 @@
 
 ;; Fill column indicator
 (require 'fill-column-indicator)
-(setq fci-rule-color "#111122")
+(setq fci-rule-color "grey")
 
 ;; Smart M-x is smart
 (require 'smex)
@@ -116,3 +124,11 @@
 ;; Enable smooth scrolling
 (require 'smooth-scrolling)
 (smooth-scrolling-mode 1)
+
+;; set programming mode
+(defun setup-programming-mode ()
+  (origami-mode 1)
+  ;(fci-mode 1)
+  )
+
+(add-hook 'php-mode-hook 'setup-programming-mode)

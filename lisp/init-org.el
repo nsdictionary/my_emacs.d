@@ -38,7 +38,7 @@
 ;; 키워드 설정
 (setq org-todo-keywords
       '((sequence "TODO(t)" "|" "DONE(d)")
-        (sequence "PROJECT(p)" "WAIT(w)" "HOLD(h)")
+        (sequence "PROJECT(p)" "WAIT(w)" "HOLD(h)" "|")
         (sequence "|" "CANCELED(c)")))
 
 ;; 완료된 키워드와 헤드라인에 취소선 넣기
@@ -86,16 +86,14 @@
 ;; 스케줄 등록된 데드라인 표시안함
 (setq org-agenda-skip-deadline-prewarning-if-scheduled t)
 
-;; 아젠다 날짜 표시방식 변경
-;; (참고 : C-h f format-time-string <RET>)
-(setq org-agenda-format-date
-  "\n\n%Y-%m-%d (%A) ========================================================================")
+;; 아젠다 날짜 표시방식 변경 (참고 : C-h f format-time-string <RET>)
+;; (setq org-agenda-format-date
+;;   "\n\n%Y-%m-%d (%A) ========================================================================")
 
 ;; 태그 표시위치 지정
 (setq org-agenda-tags-column 100)
 
-;; 아젠다 아이템 표시방법 변경
-;; (참고 : C-h v org-agenda-prefix-format <RET>)
+;; 아젠다 아이템 표시방법 변경 (참고 : C-h v org-agenda-prefix-format <RET>)
 (setq org-agenda-prefix-format
   '(
     ;;(agenda . "  - %-12:c%?-12t% s")

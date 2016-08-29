@@ -22,10 +22,10 @@
 (global-set-key (kbd "C-c <") (kbd (format "C-u - %d C-x TAB" tab-width)))
 
 ;; Help teach to unlearn the arrow keys
-;; (global-unset-key (kbd "<left>"))
-;; (global-unset-key (kbd "<right>"))
-;; (global-unset-key (kbd "<up>"))
-;; (global-unset-key (kbd "<down>"))
+(global-unset-key [left])
+(global-unset-key [up])
+(global-unset-key [right])
+(global-unset-key [down])
 
 
 ;; I don't need to kill emacs that easily
@@ -51,10 +51,10 @@
 (windmove-default-keybindings) ;; Shift+direction
 
 ;; Move windows, even in org-mode
-(global-set-key (kbd "<s-right>") 'windmove-right)
-(global-set-key (kbd "<s-left>") 'windmove-left)
-(global-set-key (kbd "<s-up>") 'windmove-up)
-(global-set-key (kbd "<s-down>") 'windmove-down)
+(add-hook 'org-shiftup-final-hook 'windmove-up)
+(add-hook 'org-shiftleft-final-hook 'windmove-left)
+(add-hook 'org-shiftdown-final-hook 'windmove-down)
+(add-hook 'org-shiftright-final-hook 'windmove-right)
 
 ;; Navigation bindings
 (global-set-key (kbd "M-p") 'backward-paragraph)
@@ -91,7 +91,8 @@
 (global-set-key (kbd "C-c M-f") 'fold-this-unfold-all)
 
 ;; Deft
-(global-set-key (kbd "C-c C-d") 'deft)
+(global-set-key [f2] 'deft)
+(global-set-key (kbd "C-x C-g") 'deft-find-file)
 
 ;; you can select the key you prefer to
 (define-key global-map (kbd "C-;") 'ace-jump-mode)
@@ -108,5 +109,33 @@
 ;; Webjump let's you quickly search google, wikipedia, emacs wiki
 (global-set-key (kbd "C-x g") 'webjump)
 (global-set-key (kbd "C-x M-g") 'browse-url-at-point)
+
+;; Magit
+(defun magit-status-fullscreen (prefix)
+  (interactive "P")
+  (magit-status)
+  (unless prefix
+    (delete-other-windows)))
+
+(global-set-key (kbd "C-x m") 'magit-status-fullscreen)
+(autoload 'magit-status-fullscreen "magit")
+
+;; jump-char - like f in Vim
+(global-set-key (kbd "M-m") 'jump-char-forward)
+(global-set-key (kbd "M-M") 'jump-char-backward)
+(global-set-key (kbd "s-m") 'jump-char-backward)
+
+;; vim's ci and co commands
+(global-set-key (kbd "M-i") 'change-inner)
+(global-set-key (kbd "M-o") 'change-outer)
+
+(global-set-key (kbd "s-i") 'copy-inner)
+(global-set-key (kbd "s-o") 'copy-outer)
+
+;; origami
+(global-set-key (kbd "C-M-<left>") 'origami-close-node)
+(global-set-key (kbd "C-M-<right>") 'origami-open-node)
+(global-set-key (kbd "C-S-M-<left>") 'origami-close-all-nodes)
+(global-set-key (kbd "C-M-<down>") 'origami-open-all-nodes)
 
 (provide 'key-bindings)
