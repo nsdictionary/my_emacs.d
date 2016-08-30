@@ -134,8 +134,15 @@
 
 ;; origami
 (global-set-key (kbd "C-M-<left>") 'origami-close-node)
-(global-set-key (kbd "C-M-<right>") 'origami-open-node)
+(global-set-key (kbd "C-M-<right>") 'origami-open-node-recursively)
 (global-set-key (kbd "C-S-M-<left>") 'origami-close-all-nodes)
 (global-set-key (kbd "C-M-<down>") 'origami-open-all-nodes)
+
+;; Browse the kill ring
+(global-set-key (kbd "C-x C-y") 'browse-kill-ring)
+
+;; Scroll by line
+(global-set-key (kbd "C-M-n") (lambda () (interactive) (scroll-up 3)))
+(global-set-key (kbd "C-M-p") (lambda () (interactive) (scroll-down 3)))
 
 (provide 'key-bindings)

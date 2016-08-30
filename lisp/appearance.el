@@ -1,8 +1,11 @@
 ;; set default theme
-(load-theme 'leuven t)
+(load-theme 'tangotango t)
 
 ;; set line number
 (global-linum-mode 1)
+
+;; set scrollbar
+(global-yascroll-bar-mode 1)
 
 ;; highlight cursor line
 (global-hl-line-mode 1)

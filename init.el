@@ -89,7 +89,9 @@
 (require-package 'jump-char)
 (require-package 'change-inner)
 (require-package 'origami)
-(require-package 'leuven-theme)
+(require-package 'tangotango-theme)
+(require-package 'browse-kill-ring)
+(require-package 'yascroll)
 
 ;; Setting appearance
 (require 'appearance)
@@ -108,6 +110,10 @@
 ;; Fill column indicator
 (require 'fill-column-indicator)
 (setq fci-rule-color "grey")
+
+;; Browse kill ring
+(require 'browse-kill-ring)
+(setq browse-kill-ring-quit-action 'save-and-restore)
 
 ;; Smart M-x is smart
 (require 'smex)
@@ -130,5 +136,10 @@
   (origami-mode 1)
   ;(fci-mode 1)
   )
+
+;; Emacs server
+(require 'server)
+(unless (server-running-p)
+  (server-start))
 
 (add-hook 'php-mode-hook 'setup-programming-mode)
