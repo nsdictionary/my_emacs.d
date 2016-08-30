@@ -9,6 +9,7 @@
 
 ;; highlight cursor line
 (global-hl-line-mode 1)
+(set-face-background 'hl-line "gray13")
 
 ;; Highlight matching parentheses when the point is on them.
 (show-paren-mode 1)
