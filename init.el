@@ -14,7 +14,10 @@
   (setq mac-option-modifier 'super)
   (setq mac-command-modifier 'meta)
   (setq ns-function-modifier 'hyper)
-  (global-set-key (kbd "M-a") 'mark-whole-buffer))
+  (global-set-key (kbd "M-a") 'mark-whole-buffer)
+  (let ((usr-local "/usr/local/bin"))
+    (add-to-list 'exec-path usr-local)
+    (setenv "PATH" (concat usr-local path-separator (getenv "PATH")))))
 
 ;; disable save mode
 (desktop-save-mode 0)
@@ -122,10 +125,17 @@
 ;; Setup key bindings
 (require 'key-bindings)
 
-;; Setup extensions
+;; Setting ido
 (eval-after-load 'ido '(require 'init-ido))
+
+;; org mode
 (require 'init-org)
+
+;; Setting deft
 (require 'init-deft)
+
+;; Setting clojure
+(require 'init-clojure)
 
 ;; Enable smooth scrolling
 (require 'smooth-scrolling)
