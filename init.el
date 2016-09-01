@@ -95,6 +95,8 @@
 (require-package 'tangotango-theme)
 (require-package 'browse-kill-ring)
 (require-package 'yascroll)
+(require-package 'paredit)
+(require-package 's)
 
 ;; Setting appearance
 (require 'appearance)
@@ -136,6 +138,9 @@
 
 ;; Setting clojure
 (require 'init-clojure)
+
+;; Setting paredit
+(require 'init-paredit)
 
 ;; Enable smooth scrolling
 (require 'smooth-scrolling)
