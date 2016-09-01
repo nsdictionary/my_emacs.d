@@ -152,9 +152,9 @@
   ;(fci-mode 1)
   )
 
+(add-hook 'php-mode-hook 'setup-programming-mode)
+
 ;; Emacs server
 (require 'server)
 (unless (server-running-p)
   (server-start))
-
-(add-hook 'php-mode-hook 'setup-programming-mode)
