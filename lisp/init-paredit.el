@@ -34,8 +34,8 @@
 
 (define-key paredit-mode-map (kbd "M-(") 'paredit-wrap-round)
 (define-key paredit-mode-map (kbd "M-)") 'paredit-wrap-round-from-behind)
-(define-key paredit-mode-map (kbd "M-s-8") 'paredit-wrap-square)
-(define-key paredit-mode-map (kbd "M-s-9") 'paredit-wrap-square-from-behind)
+(define-key paredit-mode-map (kbd "M-s-9") 'paredit-wrap-square)
+(define-key paredit-mode-map (kbd "M-s-0") 'paredit-wrap-square-from-behind)
 (define-key paredit-mode-map (kbd "M-s-(") 'paredit-wrap-curly)
 (define-key paredit-mode-map (kbd "M-s-)") 'paredit-wrap-curly-from-behind)
 

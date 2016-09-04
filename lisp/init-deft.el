@@ -3,7 +3,7 @@
 (require 'deft)
 
 (setq
- deft-extensions '("org" "txt" "md" "taskpaper")
+ deft-extensions '("org" "clj" "txt" "md" "taskpaper")
  deft-default-extension "org"
  deft-directory "~/Dropbox/wiki"
  deft-text-mode 'org-mode

@@ -1,5 +1,8 @@
 ;;; Key bindings
 
+;; Delete selection mode
+(delete-selection-mode t)
+
 ;; Completion at point
 (global-set-key (kbd "C-,") 'completion-at-point)
 
@@ -144,5 +147,25 @@
 ;; Scroll by line
 (global-set-key (kbd "C-M-n") (lambda () (interactive) (scroll-up 3)))
 (global-set-key (kbd "C-M-p") (lambda () (interactive) (scroll-down 3)))
+
+;; Clear buffer on eshell mode
+(defun eshell-clear-buffer ()
+  "Clear terminal"
+  (interactive)
+  (let ((inhibit-read-only t))
+    (erase-buffer)
+    (eshell-send-input)))
+(add-hook 'eshell-mode-hook
+      '(lambda()
+         (local-set-key (kbd "C-l") 'eshell-clear-buffer)))
+
+;; Smart beginning of line
+(defun smart-beginning-of-line ()
+  (interactive)
+  (let ((oldpos (point)))
+    (back-to-indentation)
+    (and (= oldpos (point))
+         (beginning-of-line))))
+(global-set-key "\C-a" 'smart-beginning-of-line)
 
 (provide 'key-bindings)
