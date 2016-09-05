@@ -11,4 +11,8 @@
      (define-key cider-repl-mode-map [up] 'cider-repl-backward-input)
      (define-key cider-repl-mode-map [down] 'cider-repl-forward-input)))
 
+;; in org mode
+(require 'ob-clojure)
+(setq org-babel-clojure-backend 'cider)
+
 (provide 'init-clojure)
