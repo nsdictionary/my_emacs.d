@@ -153,6 +153,7 @@
   )
 
 (add-hook 'php-mode-hook 'setup-programming-mode)
+(add-hook 'clojure-mode-hook 'setup-programming-mode)
 
 ;; Emacs server
 (require 'server)
