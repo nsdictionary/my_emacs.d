@@ -108,6 +108,8 @@
 (require-package 'browse-kill-ring)
 (require-package 'yascroll)
 (require-package 'paredit)
+(require-package 'neotree)
+(require-package 'all-the-icons)
 (require-package 's)
 
 ;; Setting appearance
@@ -153,6 +155,9 @@
 
 ;; Setting paredit
 (require 'init-paredit)
+
+;; Setting neotree
+(require 'init-neotree)
 
 ;; Enable smooth scrolling
 (require 'smooth-scrolling)
