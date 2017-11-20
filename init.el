@@ -1,3 +1,16 @@
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+;(package-initialize)
+
+;; Emacs version check
+(let ((minver "24.3"))
+  (when (version< emacs-version minver)
+    (error "Your Emacs is too old -- this config requires v%s or higher" minver)))
+(when (version< emacs-version "24.5")
+  (message "Your Emacs is old, and some functionality in this config will be disabled. Please upgrade if possible."))
+
 ;; Turn off mouse interface early in startup to avoid momentary display
 (if (fboundp 'menu-bar-mode) (menu-bar-mode 1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
@@ -74,7 +87,7 @@
 (require-package 'flx-ido)
 (require-package 'ido-vertical-mode)
 (require-package 'ido-at-point)
-(require-package 'ido-ubiquitous)
+(require-package 'ido-completing-read+)
 (require-package 'deft)
 (require-package 'fill-column-indicator)
 (require-package 'smex)
@@ -91,7 +104,6 @@
 (require-package 'disable-mouse)
 (require-package 'jump-char)
 (require-package 'change-inner)
-(require-package 'origami)
 (require-package 'tangotango-theme)
 (require-package 'browse-kill-ring)
 (require-package 'yascroll)
@@ -148,7 +160,6 @@
 
 ;; set programming mode
 (defun setup-programming-mode ()
-  (origami-mode 1)
   ;(fci-mode 1)
   )
 
@@ -159,3 +170,8 @@
 (require 'server)
 (unless (server-running-p)
   (server-start))
+
+;; Stop Emacs from Writing package-selected-packages into init.el
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+   (when (file-exists-p custom-file)
+       (load custom-file))
