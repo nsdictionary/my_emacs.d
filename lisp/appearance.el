@@ -15,7 +15,7 @@
 (show-paren-mode 1)
 
 ;; set default font
-(set-default-font "DejaVu Sans Mono Book 12")
+(set-default-font "DejaVu Sans Mono 13")
 
 ;; Don't highlight matches with jump-char - it's distracting
 (setq jump-char-lazy-highlight-face nil)
