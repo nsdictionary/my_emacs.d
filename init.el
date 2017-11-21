@@ -110,6 +110,7 @@
 (require-package 'paredit)
 (require-package 'neotree)
 (require-package 'all-the-icons)
+(require-package 'projectile)
 (require-package 's)
 
 ;; Setting appearance
@@ -138,26 +139,15 @@
 (require 'smex)
 (smex-initialize)
 
-;; Setup key bindings
+;; load configurations
 (require 'key-bindings)
-
-;; Setting ido
 (eval-after-load 'ido '(require 'init-ido))
-
-;; org mode
 (require 'init-org)
-
-;; Setting deft
 (require 'init-deft)
-
-;; Setting clojure
 (require 'init-clojure)
-
-;; Setting paredit
 (require 'init-paredit)
-
-;; Setting neotree
 (require 'init-neotree)
+(require 'init-projectile)
 
 ;; Enable smooth scrolling
 (require 'smooth-scrolling)
