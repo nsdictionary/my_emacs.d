@@ -1,5 +1,5 @@
 ;; set default theme
-(load-theme 'tangotango t)
+(load-theme 'nimbus t)
 
 ;; set line number
 (global-linum-mode 1)

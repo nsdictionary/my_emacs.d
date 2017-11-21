@@ -104,7 +104,7 @@
 (require-package 'disable-mouse)
 (require-package 'jump-char)
 (require-package 'change-inner)
-(require-package 'tangotango-theme)
+(require-package 'nimbus-theme)
 (require-package 'browse-kill-ring)
 (require-package 'yascroll)
 (require-package 'paredit)
