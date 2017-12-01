@@ -1,1 +1,0 @@
-("~/Workspace/sentbe-rails-restful/" "~/.emacs.d/")
