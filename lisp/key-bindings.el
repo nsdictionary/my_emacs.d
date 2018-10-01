@@ -38,9 +38,6 @@
 ;; File finding
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
 
-;; Window switching
-(windmove-default-keybindings) ;; Shift+direction
-
 ;; Move windows, even in org-mode
 (add-hook 'org-shiftup-final-hook 'windmove-up)
 (add-hook 'org-shiftleft-final-hook 'windmove-left)
@@ -71,11 +68,6 @@
     ))
 
 (global-set-key (kbd "C-c b") 'create-scratch-buffer)
-
-;; Fold the active region
-(global-set-key (kbd "C-c C-f") 'fold-this-all)
-(global-set-key (kbd "C-c C-F") 'fold-this)
-(global-set-key (kbd "C-c M-f") 'fold-this-unfold-all)
 
 ;; Deft
 (global-set-key [f2] 'deft)
@@ -147,4 +139,9 @@
   "Moves the point to the newly created window after splitting."
   (other-window 1))
 
+;; Resize window
+(global-set-key (kbd "<C-s-up>") 'shrink-window)
+(global-set-key (kbd "<C-s-down>") 'enlarge-window)
+(global-set-key (kbd "<C-s-left>") 'shrink-window-horizontally)
+(global-set-key (kbd "<C-s-right>") 'enlarge-window-horizontally)
 (provide 'key-bindings)

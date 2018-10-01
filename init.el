@@ -86,7 +86,6 @@
 (require-package 'deft)
 (require-package 'fill-column-indicator)
 (require-package 'smex)
-(require-package 'fold-this)
 (require-package 'php-mode)
 (require-package 'ace-jump-mode)
 (require-package 'multiple-cursors)
@@ -106,6 +105,7 @@
 (require-package 'projectile)
 (require-package 'highlight-indent-guides)
 (require-package 'multi-term)
+(require-package 'evil-vimish-fold)
 (require-package 's)
 
 ;; evil mode

@@ -1,6 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
 (evil-mode 1)
+(evil-vimish-fold-mode 1)
 
 (define-key evil-normal-state-map "\C-e" 'evil-end-of-line)
 (define-key evil-insert-state-map "\C-e" 'end-of-line)
@@ -10,9 +11,9 @@
 (define-key evil-insert-state-map "\C-a" 'beginning-of-line)
 (define-key evil-visual-state-map "\C-a" 'evil-beginning-of-line)
 (define-key evil-motion-state-map "\C-a" 'evil-beginning-of-line)
-(define-key evil-normal-state-map "\C-f" 'evil-forward-char)
+(define-key evil-normal-state-map "\C-f" 'projectile-find-file)
 (define-key evil-insert-state-map "\C-f" 'evil-forward-char)
-(define-key evil-insert-state-map "\C-f" 'evil-forward-char)
+(define-key evil-visual-state-map "\C-f" 'evil-forward-char)
 (define-key evil-normal-state-map "\C-b" 'evil-backward-char)
 (define-key evil-insert-state-map "\C-b" 'evil-backward-char)
 (define-key evil-visual-state-map "\C-b" 'evil-backward-char)
@@ -27,6 +28,7 @@
 (define-key evil-visual-state-map (kbd "C-u") 'evil-scroll-up)
 (define-key evil-normal-state-map (kbd "C-d") 'evil-scroll-down)
 (define-key evil-visual-state-map (kbd "C-d") 'evil-scroll-down)
+
 
 ;; Make evil-mode up/down operate in screen lines instead of logical lines
 (define-key evil-motion-state-map "j" 'evil-next-visual-line)
@@ -74,7 +76,6 @@
   "b" 'switch-to-buffer
   "k" 'kill-buffer
   "d" 'dired
-  "1" 'delete-other-windows
   "s" 'split-window-below
   "v" 'split-window-right
   "z" 'eshell
@@ -86,4 +87,3 @@
 (evil-set-initial-state 'term-mode 'emacs)
 
 (provide 'init-evil)
-
