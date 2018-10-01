@@ -105,6 +105,7 @@
 (require-package 'all-the-icons)
 (require-package 'projectile)
 (require-package 'highlight-indent-guides)
+(require-package 'multi-term)
 (require-package 's)
 
 ;; evil mode

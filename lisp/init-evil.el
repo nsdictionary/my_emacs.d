@@ -52,6 +52,13 @@
                       (evil-scroll-line-down 1)
                       ))
 
+(eval-after-load "evil"
+  '(progn
+     (define-key evil-normal-state-map (kbd "C-h") 'evil-window-left)
+     (define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
+     (define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
+     (define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)))
+
 ;; evil surround
 (use-package evil-surround
   :ensure t
@@ -65,8 +72,18 @@
 (evil-leader/set-key
   "e" 'find-file
   "b" 'switch-to-buffer
-  "k" 'kill-buffer)
+  "k" 'kill-buffer
+  "d" 'dired
+  "1" 'delete-other-windows
+  "s" 'split-window-below
+  "v" 'split-window-right
+  "z" 'eshell
+  )
 
+(eval-after-load "magit"
+                 (evil-leader/set-key "g" 'magit-status))
+
+(evil-set-initial-state 'term-mode 'emacs)
 
 (provide 'init-evil)
 
