@@ -72,18 +72,30 @@
 (evil-leader/set-leader ",")
 
 (evil-leader/set-key
-  "e" 'find-file
+  "e" (lambda () (interactive) (find-file "~/.emacs.d/init.el"))
   "b" 'switch-to-buffer
   "k" 'kill-buffer
   "d" 'dired
   "s" 'split-window-below
   "v" 'split-window-right
+  "nn" 'neotree-toggle
   "z" 'eshell
   )
 
 (eval-after-load "magit"
                  (evil-leader/set-key "g" 'magit-status))
 
+
+;; terminal
 (evil-set-initial-state 'term-mode 'emacs)
+
+;; neotree
+(add-hook 'neotree-mode-hook
+      (lambda ()
+        (define-key evil-normal-state-local-map (kbd "s") 'neotree-enter-vertical-split)
+        (define-key evil-normal-state-local-map (kbd "i") 'neotree-enter-horizontal-split)
+        (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
+        (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
+        (define-key evil-normal-state-local-map (kbd "o") 'neotree-enter)))
 
 (provide 'init-evil)

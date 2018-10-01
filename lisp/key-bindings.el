@@ -4,7 +4,7 @@
 (delete-selection-mode t)
 
 ;; Completion at point
-(global-set-key (kbd "C-,") 'completion-at-point)
+(global-set-key (kbd "C-c C-n") 'completion-at-point)
 
 ;; redo+
 (require 'redo+)
@@ -33,7 +33,7 @@
 (global-set-key (kbd "C-x C-m") 'smex)
 
 ;; Create new frame
-(define-key global-map (kbd "C-x C-n") 'make-frame-command)
+(define-key global-map (kbd "C-s-n") 'make-frame-command)
 
 ;; File finding
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
@@ -132,7 +132,7 @@
      (`fullboth nil)
      (`fullscreen nil)
      (_ 'fullscreen))))
-(global-set-key (kbd "C-s-f") 'toggle-fullscreen)
+(global-set-key (kbd "C-s-<return>") 'toggle-fullscreen)
 
 ;; Move focus after split window
 (defadvice split-window (after move-point-to-new-window activate)
@@ -144,4 +144,5 @@
 (global-set-key (kbd "<C-s-down>") 'enlarge-window)
 (global-set-key (kbd "<C-s-left>") 'shrink-window-horizontally)
 (global-set-key (kbd "<C-s-right>") 'enlarge-window-horizontally)
+
 (provide 'key-bindings)
