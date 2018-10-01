@@ -151,6 +151,7 @@
 (require 'init-neotree)
 (require 'init-projectile)
 (require 'init-evil)
+(require 'init-term)
 
 ;; Enable smooth scrolling
 (require 'smooth-scrolling)
