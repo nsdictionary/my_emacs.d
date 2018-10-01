@@ -8,7 +8,6 @@
 
 ;; redo+
 (require 'redo+)
-(global-set-key (kbd "M-_") 'redo)
 
 ;; marked 2
 (defun markdown-preview-file ()
@@ -20,16 +19,11 @@
   )
 (global-set-key "\C-cm" 'markdown-preview-file)
 
-;; shift region
-(global-set-key (kbd "C-c >") (kbd (format "C-u %d C-x TAB" tab-width)))
-(global-set-key (kbd "C-c <") (kbd (format "C-u - %d C-x TAB" tab-width)))
-
 ;; Help teach to unlearn the arrow keys
 (global-unset-key [left])
 (global-unset-key [up])
 (global-unset-key [right])
 (global-unset-key [down])
-
 
 ;; I don't need to kill emacs that easily
 ;; the mnemonic is C-x REALLY QUIT
@@ -58,10 +52,6 @@
 (add-hook 'org-shiftleft-final-hook 'windmove-left)
 (add-hook 'org-shiftdown-final-hook 'windmove-down)
 (add-hook 'org-shiftright-final-hook 'windmove-right)
-
-;; Navigation bindings
-(global-set-key (kbd "M-p") 'backward-paragraph)
-(global-set-key (kbd "M-n") 'forward-paragraph)
 
 ;; Comment/uncomment block
 (global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
@@ -123,24 +113,8 @@
 (global-set-key (kbd "C-x m") 'magit-status-fullscreen)
 (autoload 'magit-status-fullscreen "magit")
 
-;; jump-char - like f in Vim
-(global-set-key (kbd "M-m") 'jump-char-forward)
-(global-set-key (kbd "M-M") 'jump-char-backward)
-(global-set-key (kbd "s-m") 'jump-char-backward)
-
-;; vim's ci and co commands
-(global-set-key (kbd "M-i") 'change-inner)
-(global-set-key (kbd "M-o") 'change-outer)
-
-(global-set-key (kbd "s-i") 'copy-inner)
-(global-set-key (kbd "s-o") 'copy-outer)
-
 ;; Browse the kill ring
 (global-set-key (kbd "C-x C-y") 'browse-kill-ring)
-
-;; Scroll by line
-(global-set-key (kbd "C-M-n") (lambda () (interactive) (scroll-up 3)))
-(global-set-key (kbd "C-M-p") (lambda () (interactive) (scroll-down 3)))
 
 ;; Clear buffer on eshell mode
 (defun eshell-clear-buffer ()

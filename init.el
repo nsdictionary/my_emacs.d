@@ -113,6 +113,13 @@
 (require-package 'projectile)
 (require-package 's)
 
+;; evil mode
+(require-package 'evil)
+(require-package 'use-package) ; for evil-surround
+(require-package 'evil-surround)
+(require-package 'evil-leader)
+
+
 ;; Setting appearance
 (require 'appearance)
 
@@ -148,6 +155,7 @@
 (require 'init-paredit)
 (require 'init-neotree)
 (require 'init-projectile)
+(require 'init-evil)
 
 ;; Enable smooth scrolling
 (require 'smooth-scrolling)

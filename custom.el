@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ac-cider cider clojure-mode yascroll browse-kill-ring tangotango-theme change-inner jump-char disable-mouse magit move-text paredit guide-key smooth-scrolling multiple-cursors ace-jump-mode php-mode fold-this redo+ smex fill-column-indicator deft ido-completing-read+ ido-at-point ido-vertical-mode flx-ido flx dash better-defaults))))
+    (evil-leader evil-surround ac-cider cider clojure-mode yascroll browse-kill-ring tangotango-theme change-inner jump-char disable-mouse magit move-text paredit guide-key smooth-scrolling multiple-cursors ace-jump-mode php-mode fold-this redo+ smex fill-column-indicator deft ido-completing-read+ ido-at-point ido-vertical-mode flx-ido flx dash better-defaults))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
