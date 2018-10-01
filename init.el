@@ -49,7 +49,7 @@
 
 ;; tab settings
 (setq-default indent-tabs-mode nil) ; soft tab
-(setq-default tab-width 4) ; tab size 4
+(setq-default tab-width 2) ; tab size 4
 (global-set-key (kbd "TAB") 'self-insert-command) ; self insert tab
 
 ;; display cursor position
@@ -64,11 +64,6 @@
 
 ;; ignore ring-bell sound
 (setq ring-bell-function 'ignore)
-
-;; Scroll only half-pages.
-(require 'view)
-(global-set-key "\C-v"   'View-scroll-half-page-forward)
-(global-set-key "\M-v"   'View-scroll-half-page-backward)
 
 ;; Set path to dependencies
 (setq settings-dir
@@ -91,7 +86,6 @@
 (require-package 'deft)
 (require-package 'fill-column-indicator)
 (require-package 'smex)
-;(require-package 'redo+)
 (require-package 'fold-this)
 (require-package 'php-mode)
 (require-package 'ace-jump-mode)
@@ -110,6 +104,7 @@
 (require-package 'neotree)
 (require-package 'all-the-icons)
 (require-package 'projectile)
+(require-package 'highlight-indent-guides)
 (require-package 's)
 
 ;; evil mode
@@ -167,6 +162,7 @@
 
 (add-hook 'php-mode-hook 'setup-programming-mode)
 (add-hook 'clojure-mode-hook 'setup-programming-mode)
+(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 
 ;; Emacs server
 (require 'server)

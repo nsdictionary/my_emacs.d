@@ -29,4 +29,8 @@
       ;; '(left-curly-arrow right-curly-arrow) ;; default
       )
 
+;; Highlight indent guide
+(setq highlight-indent-guides-method 'character)
+(setq highlight-indent-guides-character ?\|)
+
 (provide 'appearance)
