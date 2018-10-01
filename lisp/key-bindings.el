@@ -19,12 +19,6 @@
   )
 (global-set-key "\C-cm" 'markdown-preview-file)
 
-;; Help teach to unlearn the arrow keys
-(global-unset-key [left])
-(global-unset-key [up])
-(global-unset-key [right])
-(global-unset-key [down])
-
 ;; I don't need to kill emacs that easily
 ;; the mnemonic is C-x REALLY QUIT
 (global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
@@ -135,5 +129,22 @@
     (and (= oldpos (point))
          (beginning-of-line))))
 (global-set-key "\C-a" 'smart-beginning-of-line)
+
+;; Toggle fullscreen
+(defun toggle-fullscreen() "toggle-fullscreen, same as clicking the
+ corresponding titlebar icon in the right hand corner of Mac app windows"
+  (interactive)
+  (set-frame-parameter
+   nil 'fullscreen
+   (pcase (frame-parameter nil 'fullscreen)
+     (`fullboth nil)
+     (`fullscreen nil)
+     (_ 'fullscreen))))
+(global-set-key (kbd "C-s-f") 'toggle-fullscreen)
+
+;; Move focus after split window
+(defadvice split-window (after move-point-to-new-window activate)
+  "Moves the point to the newly created window after splitting."
+  (other-window 1))
 
 (provide 'key-bindings)
