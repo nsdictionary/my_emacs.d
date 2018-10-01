@@ -52,10 +52,21 @@
                       (evil-scroll-line-down 1)
                       ))
 
-
+;; evil surround
 (use-package evil-surround
   :ensure t
   :config
   (global-evil-surround-mode 1))
 
+;; evil leader
+(global-evil-leader-mode)
+(evil-leader/set-leader ",")
+
+(evil-leader/set-key
+  "e" 'find-file
+  "b" 'switch-to-buffer
+  "k" 'kill-buffer)
+
+
 (provide 'init-evil)
+
