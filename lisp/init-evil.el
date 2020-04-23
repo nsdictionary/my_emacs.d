@@ -25,8 +25,11 @@
 (define-key evil-normal-state-map (kbd "C-d") 'evil-scroll-down)
 (define-key evil-visual-state-map (kbd "C-d") 'evil-scroll-down)
 (define-key evil-normal-state-map (kbd "SPC") 'evil-search-forward)
-(evil-ex-define-cmd "q" 'kill-this-buffer)
 
+;; :q should kill the current buffer rather than quitting emacs entirely
+(evil-ex-define-cmd "q" 'kill-this-buffer)
+;; Need to type out :quit to close emacs
+(evil-ex-define-cmd "quit" 'evil-quit)
 
 ;; Make evil-mode up/down operate in screen lines instead of logical lines
 (define-key evil-motion-state-map "j" 'evil-next-visual-line)
