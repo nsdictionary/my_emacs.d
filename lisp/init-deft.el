@@ -5,7 +5,7 @@
 (setq
  deft-extensions '("org" "clj" "txt" "md" "taskpaper")
  deft-default-extension "org"
- deft-directory "~/Dropbox/wiki"
+ deft-directory "~/Dropbox/wiki.deft"
  deft-text-mode 'org-mode
  deft-auto-save-interval 0
  deft-use-filename-as-title t

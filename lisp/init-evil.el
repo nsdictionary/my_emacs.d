@@ -25,6 +25,7 @@
 (define-key evil-normal-state-map (kbd "C-d") 'evil-scroll-down)
 (define-key evil-visual-state-map (kbd "C-d") 'evil-scroll-down)
 (define-key evil-normal-state-map (kbd "SPC") 'evil-search-forward)
+(evil-ex-define-cmd "q" 'kill-this-buffer)
 
 
 ;; Make evil-mode up/down operate in screen lines instead of logical lines
