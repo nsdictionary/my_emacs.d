@@ -109,10 +109,10 @@
 (require-package 's)
 
 ;; evil mode
-;(require-package 'evil)
-;(require-package 'use-package) ; for evil-surround
-;(require-package 'evil-surround)
-;(require-package 'evil-leader)
+(require-package 'evil)
+(require-package 'use-package) ; for evil-surround
+(require-package 'evil-surround)
+(require-package 'evil-leader)
 
 
 ;; Setting appearance
@@ -150,16 +150,10 @@
 (require 'init-paredit)
 (require 'init-neotree)
 (require 'init-projectile)
-;(require 'init-evil)
+(require 'init-evil)
 (require 'init-term)
 (require 'init-rust)
 ;(require 'init-tabbar)
-
-;;keep cursor at same position when scrolling
-(setq scroll-preserve-screen-position 1)
-;;scroll window up/down by one line
-(global-set-key (kbd "M-n") (kbd "C-u 1 C-v"))
-(global-set-key (kbd "M-p") (kbd "C-u 1 M-v"))
 
 ;; Enable smooth scrolling
 (require 'smooth-scrolling)
