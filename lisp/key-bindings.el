@@ -38,6 +38,10 @@
 ;; File finding
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
 
+;; OSX style copy & paste
+(global-set-key (kbd "M-c") 'copy-region-as-kill)
+(global-set-key (kbd "M-v") 'yank)
+
 ;; Move windows, even in org-mode
 (add-hook 'org-shiftup-final-hook 'windmove-up)
 (add-hook 'org-shiftleft-final-hook 'windmove-left)
@@ -46,6 +50,7 @@
 
 ;; Comment/uncomment block
 (global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
+(global-set-key (kbd "C-c /") 'comment-line)
 (global-set-key (kbd "C-c u") 'uncomment-region)
 
 ;; Eval buffer

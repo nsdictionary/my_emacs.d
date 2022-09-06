@@ -25,6 +25,7 @@
 (define-key evil-normal-state-map (kbd "C-d") 'evil-scroll-down)
 (define-key evil-visual-state-map (kbd "C-d") 'evil-scroll-down)
 (define-key evil-normal-state-map (kbd "SPC") 'evil-search-forward)
+(define-key evil-normal-state-map (kbd "<tab>") 'org-cycle)
 
 ;; :q should kill the current buffer rather than quitting emacs entirely
 (evil-ex-define-cmd "q" 'kill-this-buffer)

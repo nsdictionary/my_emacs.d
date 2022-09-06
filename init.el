@@ -49,7 +49,7 @@
 
 ;; tab settings
 (setq-default indent-tabs-mode nil) ; soft tab
-(setq-default tab-width 2) ; tab size 4
+(setq-default tab-width 4) ; tab size 4
 (global-set-key (kbd "TAB") 'self-insert-command) ; self insert tab
 
 ;; display cursor position
@@ -94,7 +94,6 @@
 (require-package 'paredit)
 (require-package 'move-text)
 (require-package 'magit)
-(require-package 'disable-mouse)
 (require-package 'jump-char)
 (require-package 'change-inner)
 (require-package 'nimbus-theme)
@@ -117,10 +116,6 @@
 
 ;; Setting appearance
 (require 'appearance)
-
-;; disable mouse
-(require 'disable-mouse)
-(global-disable-mouse-mode)
 
 ;; guide-key
 (require 'guide-key)
@@ -152,8 +147,6 @@
 (require 'init-projectile)
 (require 'init-evil)
 (require 'init-term)
-;(require 'init-rust)
-;(require 'init-tabbar)
 
 ;; Enable smooth scrolling
 (require 'smooth-scrolling)

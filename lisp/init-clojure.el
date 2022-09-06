@@ -4,7 +4,7 @@
 (require-package 'cider)
 (require-package 'ac-cider)
 
-(global-set-key  [M-return] 'cider-eval-last-sexp)
+(global-set-key (kbd "C-c C-<return>") 'cider-eval-last-sexp)
 
 (add-hook 'cider-repl-mode-hook
   '(lambda ()

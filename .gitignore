@@ -17,6 +17,7 @@ site-lisp/adventur-mode
 /.sx/
 /ensime/
 
+transient
 history
 recentf
 ido.last

@@ -31,15 +31,13 @@
 
 ;; 들여쓰기
 ;; (add-hook 'org-mode-hook
-;;   '(lambda()
-;;      (setq org-indent-indentation-per-level 4)
-;;      (org-indent-mode t)))
+;;  '(lambda()
+;;    (setq org-indent-indentation-per-level 4)
+;;    (org-indent-mode t)))
 
 ;; 키워드 설정
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "|" "DONE(d)")
-        (sequence "PROJECT(p)" "WAIT(w)" "HOLD(h)" "|")
-        (sequence "|" "CANCELED(c)")))
+      '((sequence "할일" "진행중" "|" "완료" "취소")))
 
 ;; 완료된 키워드와 헤드라인에 취소선 넣기
 (setq org-fontify-done-headline t)
