@@ -6,9 +6,6 @@
 ;; Completion at point
 (global-set-key (kbd "C-c C-n") 'completion-at-point)
 
-;; redo+
-(require 'redo+)
-
 ;; marked 2
 (defun markdown-preview-file ()
   "use Marked 2 to preview the current file"

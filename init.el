@@ -112,6 +112,7 @@
 (require-package 'use-package) ; for evil-surround
 (require-package 'evil-surround)
 (require-package 'evil-leader)
+(require-package 'undo-tree)
 
 
 ;; Setting appearance

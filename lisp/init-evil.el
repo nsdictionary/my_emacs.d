@@ -3,6 +3,9 @@
 (evil-mode 1)
 (evil-vimish-fold-mode 1)
 
+(global-undo-tree-mode)
+(evil-set-undo-system 'undo-tree)
+
 (define-key evil-normal-state-map "\C-e" 'evil-end-of-line)
 (define-key evil-insert-state-map "\C-e" 'end-of-line)
 (define-key evil-visual-state-map "\C-e" 'evil-end-of-line)
