@@ -48,11 +48,6 @@
 (add-hook 'org-shiftdown-final-hook 'windmove-down)
 (add-hook 'org-shiftright-final-hook 'windmove-right)
 
-;; Comment/uncomment block
-(global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
-(global-set-key (kbd "C-c /") 'comment-line)
-(global-set-key (kbd "C-c u") 'uncomment-region)
-
 ;; Eval buffer
 (global-set-key (kbd "C-c C-k") 'eval-buffer)
 

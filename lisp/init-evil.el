@@ -82,6 +82,8 @@
   "v" 'split-window-right
   "nn" 'neotree-toggle
   "z" 'eshell
+  "/" 'comment-line
+  "c SPC" 'comment-or-uncomment-region
   )
 
 (eval-after-load "magit"

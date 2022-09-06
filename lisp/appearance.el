@@ -30,7 +30,7 @@
       )
 
 ;; Highlight indent guide
-(setq highlight-indent-guides-method 'character)
-(setq highlight-indent-guides-character ?\|)
+(setq highlight-indent-guides-method 'bitmap)
+(setq highlight-indent-guides-bitmap-function 'highlight-indent-guides--bitmap-line)
 
 (provide 'appearance)
