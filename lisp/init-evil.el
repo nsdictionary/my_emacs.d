@@ -103,6 +103,9 @@
         (define-key evil-normal-state-local-map (kbd "i") 'neotree-enter-horizontal-split)
         (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
         (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
+        (define-key evil-normal-state-local-map (kbd "H") 'neotree-hidden-file-toggle)
+        (define-key evil-normal-state-local-map (kbd "g") 'neotree-refresh)
+        (define-key evil-normal-state-local-map (kbd "U") 'neotree-select-up-node)
         (define-key evil-normal-state-local-map (kbd "o") 'neotree-enter)))
 
 (provide 'init-evil)

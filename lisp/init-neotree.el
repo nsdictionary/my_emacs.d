@@ -2,7 +2,7 @@
 
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 (setq neo-window-position 'right)
-(setq-default neo-show-hidden-files t)
+;(setq-default neo-show-hidden-files t)
 
 (defun neotree-project-dir-toggle ()
   "Open NeoTree using the project root, using find-file-in-project,
