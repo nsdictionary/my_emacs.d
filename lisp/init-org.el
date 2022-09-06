@@ -37,7 +37,7 @@
 
 ;; 키워드 설정
 (setq org-todo-keywords
-      '((sequence "할일" "진행중" "|" "완료" "취소")))
+      '((sequence "TODO" "DOING" "|" "DONE" "CANCELLED")))
 
 ;; 완료된 키워드와 헤드라인에 취소선 넣기
 (setq org-fontify-done-headline t)

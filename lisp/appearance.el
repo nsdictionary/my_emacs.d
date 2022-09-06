@@ -10,7 +10,7 @@
 ;; highlight cursor line
 (global-hl-line-mode 1)
 (set-face-background 'hl-line "gray13")
-(set-face-attribute 'region nil :background "yellow" :foreground "black")
+(set-face-attribute 'region nil :background "#f5f5dc" :foreground "black")
 
 ;; Highlight matching parentheses when the point is on them.
 (show-paren-mode 1)
