@@ -152,7 +152,7 @@
 (require 'init-projectile)
 (require 'init-evil)
 (require 'init-term)
-(require 'init-rust)
+;(require 'init-rust)
 ;(require 'init-tabbar)
 
 ;; Enable smooth scrolling
