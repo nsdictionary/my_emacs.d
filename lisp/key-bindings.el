@@ -39,6 +39,10 @@
 (global-set-key (kbd "M-c") 'copy-region-as-kill)
 (global-set-key (kbd "M-v") 'yank)
 
+;; Navigate buffer
+(global-set-key (kbd "M-[") 'previous-buffer)
+(global-set-key (kbd "M-]") 'next-buffer)
+
 ;; Move windows, even in org-mode
 (add-hook 'org-shiftup-final-hook 'windmove-up)
 (add-hook 'org-shiftleft-final-hook 'windmove-left)

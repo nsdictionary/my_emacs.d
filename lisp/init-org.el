@@ -53,8 +53,8 @@
         "~/Dropbox/wiki/org/work.org"
         "~/Dropbox/wiki/org/home.org"
         "~/Dropbox/wiki/org/read_later.org"
-        "~/Dropbox/wiki/org/read_book.org"
-        "~/Dropbox/wiki/org/buy_list.org"
+        "~/Dropbox/wiki/org/book_note.org"
+        "~/Dropbox/wiki/org/to_buy.org"
         "~/Dropbox/wiki/org/diary.org"))
 
 ;; org-mode 용 다이어리 파일 사용
