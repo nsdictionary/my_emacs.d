@@ -3,9 +3,35 @@
 (evil-mode 1)
 (evil-vimish-fold-mode 1)
 
-(global-undo-tree-mode)
-(evil-set-undo-system 'undo-tree)
+(use-package evil
+  :config
+  (evil-mode 1)
+  ;; set initial evil state for particular modes
+  (cl-loop for (mode . state) in '((cider-test-report-mode . emacs)
+                                   (deft-mode              . emacs)
+                                   (dired-mode             . normal)
+                                   (magit-mode             . normal)
+                                   (magit-status-mode      . emacs)
+                                   (magit-diff-mode        . normal)
+                                   (magit-log-mode         . normal)
+                                   (magit-process-mode     . normal)
+                                   (magit-popup-mode       . emacs)
+                                   ;; this allows vi-mode in shells
+                                   (term-mode              . emacs)
+                                   (tide-references-mode   . emacs)
+                                   (xref--xref-buffer-mode . emacs))
+           do (evil-set-initial-state mode state)))
 
+;; Using to address evil-mode ^r undo bug
+(use-package undo-tree
+  :diminish undo-tree-mode
+  :init
+  (global-undo-tree-mode)
+  :config
+  (evil-set-undo-system 'undo-tree)
+  (setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo"))))
+
+;; Evil key setup
 (define-key evil-normal-state-map "\C-e" 'evil-end-of-line)
 (define-key evil-insert-state-map "\C-e" 'end-of-line)
 (define-key evil-visual-state-map "\C-e" 'evil-end-of-line)
