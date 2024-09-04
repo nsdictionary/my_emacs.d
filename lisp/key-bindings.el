@@ -30,7 +30,7 @@
 (global-set-key (kbd "C-x C-m") 'smex)
 
 ;; Create new frame
-(define-key global-map (kbd "C-s-n") 'make-frame-command)
+(define-key global-map (kbd "C-S-n") 'make-frame-command)
 
 ;; File finding
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
@@ -133,7 +133,7 @@
      (`fullboth nil)
      (`fullscreen nil)
      (_ 'fullscreen))))
-(global-set-key (kbd "C-s-<return>") 'toggle-fullscreen)
+(global-set-key (kbd "C-S-<return>") 'toggle-fullscreen)
 
 ;; Move focus after split window
 (defadvice split-window (after move-point-to-new-window activate)
@@ -141,9 +141,9 @@
   (other-window 1))
 
 ;; Resize window
-(global-set-key (kbd "<C-s-up>") 'shrink-window)
-(global-set-key (kbd "<C-s-down>") 'enlarge-window)
-(global-set-key (kbd "<C-s-left>") 'shrink-window-horizontally)
-(global-set-key (kbd "<C-s-right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "<C-S-up>") 'shrink-window)
+(global-set-key (kbd "<C-S-down>") 'enlarge-window)
+(global-set-key (kbd "<C-S-left>") 'shrink-window-horizontally)
+(global-set-key (kbd "<C-S-right>") 'enlarge-window-horizontally)
 
 (provide 'key-bindings)
