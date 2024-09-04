@@ -1,6 +1,6 @@
 (require 'neotree)
 
-(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+(setq neo-theme 'ascii)
 (setq neo-window-position 'right)
 ;(setq-default neo-show-hidden-files t)
 

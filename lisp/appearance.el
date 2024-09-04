@@ -2,7 +2,8 @@
 (load-theme 'nimbus t)
 
 ;; set line number
-(global-display-line-numbers-mode 1)
+;(global-display-line-numbers-mode 1)
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
 ;; set scrollbar
 (global-yascroll-bar-mode 1)
