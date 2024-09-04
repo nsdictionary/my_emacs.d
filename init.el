@@ -142,7 +142,7 @@
 (eval-after-load 'ido '(require 'init-ido))
 (require 'init-org)
 (require 'init-deft)
-(require 'init-clojure)
+;(require 'init-clojure)
 (require 'init-paredit)
 (require 'init-neotree)
 (require 'init-projectile)

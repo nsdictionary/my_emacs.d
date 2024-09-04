@@ -2,7 +2,7 @@
 (load-theme 'nimbus t)
 
 ;; set line number
-(global-linum-mode 1)
+(global-display-line-numbers-mode 1)
 
 ;; set scrollbar
 (global-yascroll-bar-mode 1)
