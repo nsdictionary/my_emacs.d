@@ -40,8 +40,4 @@ or the current buffer directory."
                     (unless (null neo-window)
                       (setq neo-window-width (window-width neo-window)))))))
 
-;; Every time when the neotree window is opened, let it find current
-;; file and jump to node.
-(setq neo-smart-open t)
-
 (provide 'init-neotree)
