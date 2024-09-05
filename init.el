@@ -108,7 +108,7 @@
 (require-package 'projectile)
 (require-package 'highlight-indent-guides)
 (require-package 'multi-term)
-(require-package 'evil-vimish-fold)
+(require-package 'key-chord)
 (require-package 's)
 
 ;; evil mode
@@ -116,6 +116,7 @@
 (require-package 'use-package) ; for evil-surround
 (require-package 'evil-surround)
 (require-package 'evil-leader)
+(require-package 'evil-vimish-fold)
 (require-package 'undo-tree)
 
 

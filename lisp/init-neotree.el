@@ -1,5 +1,11 @@
 (require 'neotree)
 
+;; Enable go to top line
+(require 'key-chord)
+(key-chord-mode 1)
+(add-hook 'neotree-mode-hook
+          (lambda () (key-chord-define neotree-mode-map "gg" "1G")))
+
 (setq neo-theme 'ascii)
 (setq neo-window-position 'right)
 ;(setq-default neo-show-hidden-files t)

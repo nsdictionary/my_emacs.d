@@ -6,15 +6,15 @@
 ;; Completion at point
 (global-set-key (kbd "C-c C-n") 'completion-at-point)
 
-;; marked 2
-(defun markdown-preview-file ()
-  "use Marked 2 to preview the current file"
-  (interactive)
-  (shell-command
-   (format "open -a 'Marked 2.app' %s"
-           (shell-quote-argument (buffer-file-name))))
-  )
-(global-set-key "\C-cm" 'markdown-preview-file)
+;; ;; marked 2
+;; (defun markdown-preview-file ()
+;;   "use Marked 2 to preview the current file"
+;;   (interactive)
+;;   (shell-command
+;;    (format "open -a 'Marked 2.app' %s"
+;;            (shell-quote-argument (buffer-file-name))))
+;;   )
+;; (global-set-key "\C-cm" 'markdown-preview-file)
 
 ;; I don't need to kill emacs that easily
 ;; the mnemonic is C-x REALLY QUIT
@@ -111,7 +111,7 @@
     (erase-buffer)
     (eshell-send-input)))
 (add-hook 'eshell-mode-hook
-      '(lambda()
+      #'(lambda()
          (local-set-key (kbd "C-l") 'eshell-clear-buffer)))
 
 ;; Smart beginning of line
