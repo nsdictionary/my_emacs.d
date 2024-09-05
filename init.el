@@ -159,9 +159,10 @@
 
 ;; set programming mode
 (defun setup-programming-mode ()
-  ;(fci-mode 1)
+  (fci-mode 1)
   )
 
+(add-hook 'yaml-mode-hook 'prog-mode)
 (add-hook 'php-mode-hook 'setup-programming-mode)
 (add-hook 'clojure-mode-hook 'setup-programming-mode)
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
