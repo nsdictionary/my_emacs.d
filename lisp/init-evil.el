@@ -1,7 +1,10 @@
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
 (evil-mode 1)
-(evil-vimish-fold-mode 1)
+
+(require 'evil-vimish-fold)
+(add-hook 'prog-mode-hook 'evil-vimish-fold-mode)
+(add-hook 'text-mode-hook 'evil-vimish-fold-mode)
 
 (use-package evil
   :config
