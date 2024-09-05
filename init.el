@@ -119,7 +119,6 @@
 (require-package 'evil-vimish-fold)
 (require-package 'undo-tree)
 
-
 ;; Setting appearance
 (require 'appearance)
 
