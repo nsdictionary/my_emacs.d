@@ -22,6 +22,9 @@
 ;; is MacOS ?
 (setq is-mac (equal system-type 'darwin))
 
+;; disable completion window
+(setq completion-auto-help nil)
+
 ;; change command to meta, and ignore option
 (when is-mac
   (setq mac-option-modifier 'super)
@@ -87,6 +90,7 @@
 (require-package 'fill-column-indicator)
 (require-package 'smex)
 (require-package 'php-mode)
+(require-package 'yaml-mode)
 (require-package 'ace-jump-mode)
 (require-package 'multiple-cursors)
 (require-package 'smooth-scrolling)
